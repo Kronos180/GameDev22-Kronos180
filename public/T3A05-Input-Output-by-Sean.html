@@ -4,7 +4,7 @@
    
  </head>
  <body>
-   <h6>Version 0.0.3</h6>
+   <h6>Version 0.2.3</h6>
    <h1 align=center>T3A05-Input-Output-by-Sean.html</h1>
 
    <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good Reference to Input Output Javascipt InnerHTML value by Sean</a>
@@ -44,6 +44,12 @@ document.getElementById("demo").innerHTML = html;
 <p id="myP">This is a p element.</p>
 <div id="myDIV">This is a div element.</div>
 
+  
+  
+  
+  
+  
+  
 <script>
 let text = "Hello Mr.Ellis";
 document.getElementById("myP").innerHTML = text;
@@ -59,6 +65,49 @@ function myFunction() {
   element.innerHTML += element.innerHTML;
 }
 </script>
+ 
+  
+  
+  
+  
+  
+  
+  
+<p id="myP">   This element has extra spacing   and contains <span>a span element</span>.</p>
+
+<button onclick="getinnerHTML()">Get innerHTML</button>
+<button onclick="getinnerText()">Get innerText</button>
+<button onclick="gettextContent()">Get textContent</button>
+
+<pre id="demo"></pre>
+
+<p>The innerText property is not supported in IE 9 and earlier.</p>
+<p>The textContent property is not supported in IE 8 and earlier.</p>
+
+<script>
+function getinnerText() {
+  let text = document.getElementById("myP").innerText;
+  document.getElementById("demo").innerText = text;
+}
+
+function getinnerHTML() {
+  let text = document.getElementById("myP").innerHTML;
+  document.getElementById("demo").innerText = text;
+}
+
+function gettextContent() {
+  let text = document.getElementById("myP").textContent;
+  document.getElementById("demo").innerText = text;
+}
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
