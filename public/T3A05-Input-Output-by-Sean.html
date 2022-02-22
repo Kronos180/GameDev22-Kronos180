@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
  <head>
    
@@ -27,5 +28,40 @@
         }"><br>
    
    <div id="myDiv01">...</div>
+  
+  
+  
+ <p id="myP">I'm Sean</p>
+
+<p>I'm Evil</p>
+<p id="demo"></p>
+
+<script>
+let html = document.getElementById("myP").innerHTML;
+document.getElementById("demo").innerHTML = html;
+</script>
+  
+<p id="myP">This is a p element.</p>
+<div id="myDIV">This is a div element.</div>
+
+<script>
+let text = "Hello Mr.Ellis";
+document.getElementById("myP").innerHTML = text;
+document.getElementById("myDIV").innerHTML = text;
+</script>
+  
+<button onclick="myFunction()">Click Me</button>
+<p id="demo">I'm a Cell, I shall multiple.</p>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("demo");
+  element.innerHTML += element.innerHTML;
+}
+</script>
+  
+  
+  
+  
  </body
 </html>
