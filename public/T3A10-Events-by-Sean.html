@@ -85,7 +85,17 @@ function drop(event) {
   document.getElementById("demo").innerHTML = "The p element was dropped.";
 }
 </script>        
-         
+        
+<input type="text" oncopy="myFunction()" value="Try to copy this text">    
+    <p id="copy"></p>
+  <script>
+function myFunction() {
+  document.getElementById("copy").innerHTML = "You copied text!"
+}
+</script>
+    
+    
+    
     
   </body
 </html>
