@@ -1,8 +1,19 @@
 <html>
-  <head>
-  </head>
+<head>
+<style>
+#droptarget {
+  float: left; 
+  width: 200px; 
+  height: 35px;
+  margin: 55px;
+  margin-top: 155px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
   <body>
-<h5>Version 0.0.7</h5>
+<h5>Version 0.0.9</h5>
 <h1 align=center>T1A10-Evenets-by-Sean.html</h1><br>
 This box will make the letters you type uppercase<br>
 <input type="text" id="uppercase" onkeyup="myFunction()">
@@ -50,7 +61,31 @@ function myFunction() {
          }"> This is bold </b>
          
          
-         
+ <p ondragstart="dragStart(event)" draggable="true" id="dragtarget">Drag me into the rectangle!</p>
+
+<div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+
+<p style="clear:both;" id="demo"></p>
+
+<script>
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+  document.getElementById("demo").innerHTML = "The p element is OVER the droptarget.";
+  event.target.style.border = "4px dotted green";
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped.";
+}
+</script>        
          
     
   </body
