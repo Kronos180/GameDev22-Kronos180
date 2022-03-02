@@ -2,7 +2,7 @@
   <head>
   </head>
   <body>
-<h5>Version 0.0.6</h5>
+<h5>Version 0.0.7</h5>
 <h1 align=center>T1A10-Evenets-by-Sean.html</h1><br>
 This box will make the letters you type uppercase<br>
 <input type="text" id="uppercase" onkeyup="myFunction()">
@@ -24,14 +24,25 @@ function keyupFunction() {
 }
 </script><br>
 
-When you click this text iy changes color
+When you click this text it changes color
 <p id="randomcolor" onclick="myFunction()">Click me to change my text color.</p>
 <script>
 function myFunction() {
-  document.getElementById("randomcolor").);
+  document.getElementById("randomcolor").style.color = "red");
 }
 </script>
 
+    Field1: <input type="text" id="field1" value="Hello World!"><br>
+    Field2: <input type="text" id="field2"><br><br>
 
+<button ondblclick="myFunction()">Copy Text</button>
+
+<script>
+function myFunction() {
+  document.getElementById("field2").value = document.getElementById("field1").value;
+}
+</script>
+    
+    
   </body
 </html>
