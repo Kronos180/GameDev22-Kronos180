@@ -1,1 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+<h5>Version 0.0.1</h5>
+<h1 align=center>T1A10-Evenets-by-Sean.html</h1>
 
+<input type="text" id="fname" onkeyup="myFunction()">
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+<script>
+function keydownFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+function keyupFunction() {
+  document.getElementById("demo").style.backgroundColor = "green";
+}
+</script>
+
+<p id="randomcolor" onclick="myFunction()">Click me to change my text color.</p>
+<script>
+function myFunction() {
+  document.getElementById("randomcolor").randomColor = Math.floor(Math.random()*16777215).toString(16);
+}
+</script>
+
+
+  </body
+</html>
