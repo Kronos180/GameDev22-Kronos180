@@ -2,24 +2,24 @@
   <head>
   </head>
   <body>
-<h5>Version 0.0.1</h5>
+<h5>Version 0.0.4</h5>
 <h1 align=center>T1A10-Evenets-by-Sean.html</h1>
 
-<input type="text" id="fname" onkeyup="myFunction()">
+<input type="text" id="uppercase" onkeyup="myFunction()">
 <script>
 function myFunction() {
-  var x = document.getElementById("fname");
+  var x = document.getElementById("uppercase");
   x.value = x.value.toUpperCase();
 }
 </script>
 
-<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+<input type="text" id="colorchangebox" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
 <script>
 function keydownFunction() {
-  document.getElementById("demo").style.backgroundColor = "red";
+  document.getElementById("colorchangebox").style.backgroundColor = "red";
 }
 function keyupFunction() {
-  document.getElementById("demo").style.backgroundColor = "green";
+  document.getElementById("colorchangebox").style.backgroundColor = "green";
 }
 </script>
 
