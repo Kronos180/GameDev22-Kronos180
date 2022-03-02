@@ -38,20 +38,17 @@ function keyupFunction() {
 }
 </script><br>
 
-    Original: <input type="text" id="field1" value="Hello World!"><br>
-    Copy of Original: <input type="text" id="field2"><br><br>
+Original: <input type="text" id="original" value="Hello World!"><br>
+Copy of Original: <input type="text" id="copied"><br><br>
 
 <button ondblclick="myFunction()">Copy Text</button>
 
 <script>
 function myFunction() {
-  document.getElementById("field2").value = document.getElementById("field1").value;
+  document.getElementById("copied").value = document.getElementById("original").value;
 }
 </script>
     <br><br>
-
-    
-
     
     <b id="myB01" onMouseOut="{
          document.getElementById('myB01').innerHTML = 'This is bold'
@@ -95,7 +92,7 @@ function myFunction() {
 </script>
     
     
-    i think that is eight different events
+    I Think That Is Eight Different Events
     
   </body
 </html>
