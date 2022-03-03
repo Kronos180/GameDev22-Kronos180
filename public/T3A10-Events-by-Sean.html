@@ -41,10 +41,10 @@ function keyupFunction() {
 Original: <input type="text" id="original" value="Hello World!"><br>
 Copy of Original: <input type="text" id="duplicate"><br><br>
 
-<button ondblclick="myFunction()">Copy Text</button>
+<button ondblclick="myDuplicateFunction()">Copy Text</button>
 
 <script>
-function myFunction() {
+function myDuplicateFunction() {
   document.getElementById("duplicate").value = document.getElementById("original").value;
 }
 </script>
