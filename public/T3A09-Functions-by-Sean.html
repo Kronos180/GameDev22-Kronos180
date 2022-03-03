@@ -1,15 +1,5 @@
-<html>
- <head>
- </head>  
+<html> 
  <body>  
-     <script>
-     function myExampleFunction(){
-       let myIn01 = parseInt(document.getElementById('myText01').value)
-       let mySum = myIn01 + myIn01
-       let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
-  return myReply
-    }
-   </script>
    <h5>Version 0.0.5 </h5>
   
    <h1 align=center>T3A09-Function-by-Sean.html</h1>
@@ -25,7 +15,14 @@
   <input type=button value="Function Example" onClick="{  
     document.getElementById('myDiv01").innerHtml = myExampleFunctions()
     }">
-      
+ <script>
+  function myExampleFunction(){
+   let myIn01 = parseInt(document.getElementById('myText01').value)
+    let mySum = myIn01 + myIn01
+    let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
+    return myReply
+    }
+ </script>
     <script>
       function myAdvanced(x){
       x = parseInt(x)
