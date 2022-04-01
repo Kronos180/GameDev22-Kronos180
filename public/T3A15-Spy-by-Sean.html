@@ -8,8 +8,13 @@
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
-      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+// Define the string
+var decodedStringBtoA = 'Hello World!';
+
+// Encode the String
+var encodedStringBtoA = btoa(decodedStringBtoA);
+
+console.log(encodedStringBtoA);
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
@@ -20,7 +25,20 @@
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
 <input type=button value="decrypt" onclick="{
-   alert('Sorry, you have to do this!')
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+// Define the string
+var encodedStringAtoB = 'SGVsbG8gV29ybGQh';
+
+// Decode the String
+var decodedStringAtoB = atob(encodedStringAtoB);
+
+console.log(decodedStringAtoB);
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
 
 
