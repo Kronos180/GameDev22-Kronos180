@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>T3A07-Decision-by-Sean</title>
+  </head>
+  <body>
+    <script>
+      function Greeting() {
+          const d = new Date();
+          const h = d.getHours();
+          if (h <= 11) {
+          var greeting = 'Good Morning';
+          } else if (h >= 12 && h <= 16){
+          var greeting = 'Good Afternoon';
+          } else {
+          var greeting = 'Good Evening';
+          }
+          return document.getElementById('mygreeting').innerHTML =  greeting;
+          }
+      </script>
+  <h6>Version 0.0.1</h6>
+  <h2 align=center>T3A07-Decision-By-Sean</h2>
+
+  <input id="myNum01" type=number value="4" ><br> 
+
+<input type=button value="Simple if Statement for Decision Making" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    if (myIn01 > 3){
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+    }
+}">
+  
+  <input type=button value="if...else" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    if (myIn01 > 3){
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+    } else if (myIn01 == 3) {
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is equal to 3'
+    } else {
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+}">
+
+<input type=button value="Complex if" onclick="{
+  let myIn01 = parseFloat(document.getElementById('myNum01').value)
+  if (((myIn01 != 3 && myIn01 > -3)  && myIn01 <=100 ) || (myIn01 >= 105 &&  myIn01 <= 110)){
+      document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
+  } else {
+      document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
+}">
+
+
+<div id="myDiv01">...</div>
+  
+  
+    </body>
+</html>
