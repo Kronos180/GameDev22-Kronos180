@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo</title>
+</head>
+
+<style>
+    .flip-box-inner {
+        position: relative;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+</style>
+    <script src="./test2.js"></script>
+
+<body>
+    
+
+    <h1>Changing the Image</h1>
+    <img class="flip-box-inner" src="baby-yoda.jpeg" id="first" width="100" height="150"
+        onclick="myChangeImg_Flip = 'first';flipImage();myCheckClickedImage = myChangeImg_Flip;">
+    <img class="flip-box-inner" src="baby-yoda.jpeg" id="second" width="100" height="150"
+        onclick="myChangeImg_Flip = 'second';flipImage();myCheckClickedImage = myChangeImg_Flip; ;">
+    <input type="button" onclick="changeImage()" value="Change" />
+    <input type="button" onclick="flipImage()" value="flip" />
+    <p><strong>Note:</strong> Click on the "Change" button to Change the water bottle in to the soft drink bottle</p>
+    
+    
+
+
+
+
+</body>
+
+</html>
