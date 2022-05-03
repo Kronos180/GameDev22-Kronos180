@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo</title>
+</head>
+
+<style>
+    .flip-box-inner {
+        position: relative;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+</style>
+<script src="./flipandchangeimage.js"></script>
+
+<body>
+
+    <table border=1>
+        <tr>
+            <td><img class="flip-box-inner" src="baby-yoda.jpeg" id="first" width="100" height="150" data-flipped="false"
+                onclick="flipImage(this); "></td>
+            <td><img class="flip-box-inner" src="baby-yoda.jpeg" id="first" width="100" height="150" data-flipped="false"
+                onclick="flipImage(this); "></td>
+        </tr>
+        <tr>
+            <td><img class="flip-box-inner" src="baby-yoda.jpeg" id="first" width="100" height="150" data-flipped="false"
+                onclick="flipImage(this); "></td>
+            <td><img class="flip-box-inner" src="baby-yoda.jpeg" id="first" width="100" height="150" data-flipped="false"
+                onclick="flipImage(this); "></td>
+        </tr>
+    </table><br>
+
+    <h1>Changing the Image</h1>
+    <img class="flip-box-inner" src="baby-yoda.jpeg" id="first" width="100" height="150" data-flipped="false"
+        onclick="flipImage(this); ">
+    <img class="flip-box-inner" src="baby-yoda.jpeg" id="second" width="100" height="150" data-flipped="false"
+        onclick="flipImage(this); ">
+
+
+
+
+</body>
+
+</html>
