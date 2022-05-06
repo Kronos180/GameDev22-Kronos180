@@ -11,9 +11,16 @@ function changeImage(img, mySecondIMG) {
 
 
 function flipImage(img, mySecondIMG) {
-    switch (img.dataset.flipped) {
-        case 'true': img.style.transform = 'rotateY(0deg)'; img.dataset.flipped = 'false'; break;
-        case 'false': img.style.transform = 'rotateY(180deg)'; img.dataset.flipped = 'true'; break;
+    let pair = document.querySelectorAll('#'+img.id)
+    let base = location.origin+'/grey.jpg'
+    
+    if (pair[0].src != pair[1].src || pair[0].src == base || pair[1].src == base) {
+
+        switch (img.src) {
+            case base: img.style.transform = 'rotateY(180deg)'; break;
+            default: img.style.transform = 'rotateY(0deg)'; break;
+        }
+        setTimeout(() => { changeImage(img, mySecondIMG) }, "200")
     }
-    setTimeout(() => { changeImage(img, mySecondIMG) }, "200")
+  
 }
