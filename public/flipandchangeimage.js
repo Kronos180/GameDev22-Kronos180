@@ -11,9 +11,9 @@ function changeImage(img, mySecondIMG) {
 
 
 function flipImage(img, mySecondIMG) {
-    let pair = document.querySelectorAll('#'+img.id)
-    let base = location.origin+'/grey.jpg'
-    
+    let pair = document.querySelectorAll('#' + img.id)
+    let base = location.origin + '/grey.jpg'
+
     if (pair[0].src != pair[1].src || pair[0].src == base || pair[1].src == base) {
 
         switch (img.src) {
@@ -22,5 +22,5 @@ function flipImage(img, mySecondIMG) {
         }
         setTimeout(() => { changeImage(img, mySecondIMG) }, "200")
     }
-  
+
 }

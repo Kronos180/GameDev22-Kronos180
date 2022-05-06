@@ -1,16 +1,14 @@
- 
+<input type="text" id="myTextIn01" value="Stuff written here" size="30">
 
-<input type="text" id="myTextIn01" value="Stuff written here" size="30">  
-    
 <input id="myButton123" type="button" value="Input / Output" onclick="{
       document.getElementById('myDiv123').innerHTML = document.getElementById('myTextIn01').value // note: use value not innerHTML                                                    
 }"><br><br>
 
 <div id='myDiv123'>...</div><br>
 
- 
-    
-<input type="text" id="myTextIn1" value="3.45" size="30">  + <input type="text" id="myTextIn2" value="6.78" size="30"> 
+
+
+<input type="text" id="myTextIn1" value="3.45" size="30"> + <input type="text" id="myTextIn2" value="6.78" size="30">
 
 <input id="myButton124" type="button" value="Add the numbers" onclick="{
 
@@ -27,8 +25,8 @@
 
 <div id='myDiv124'>...</div><br>
 
-Loop this many times <input type="number" id="myTextLoop" value="10" size="10"> 
-    
+Loop this many times <input type="number" id="myTextLoop" value="10" size="10">
+
 <input id="myButton125" type="button" value="For Loop" onclick="{
                                                                
     document.getElementById('myDiv125').innerHTML = ''   // blank out the DIV  
@@ -43,10 +41,10 @@ Loop this many times <input type="number" id="myTextLoop" value="10" size="10">
 
 <div id='myDiv125'>...</div><br>
 
- 
 
-Change the number <input type="number" id="myTextIf" value="4" size="10">     
-    
+
+Change the number <input type="number" id="myTextIf" value="4" size="10">
+
 <input id="myButton126" type="button" value="If Statements" onclick="{
       
    document.getElementById('myDiv126').innerHTML = '' // Clear the DIV
@@ -86,7 +84,7 @@ Change the number <input type="number" id="myTextIf" value="4" size="10">
    }     
                                                                        
                                                                     
-   if ((myIf == 4) &amp;&amp; (myIf < 8)) {                                                                
+   if ((myIf == 4) &amp; &amp; (myIf < 8)) {                                                                
       document.getElementById('myDiv126').innerHTML += 'That number equals 4 and is less than 8 <br>'
    }     
                                                                                                                                   
@@ -94,10 +92,10 @@ Change the number <input type="number" id="myTextIf" value="4" size="10">
 
 <div id='myDiv126'>...</div><br>
 
- 
 
-Change the number <input type="number" id="myTextIf" value="4" size="10">     
-    
+
+Change the number <input type="number" id="myTextIf" value="4" size="10">
+
 <input id="myButton126" type="button" value="If Statements" onclick="{
       
    document.getElementById('myDiv126').innerHTML = '' // Clear the DIV
@@ -148,18 +146,18 @@ Change the number <input type="number" id="myTextIf" value="4" size="10">
 
 <div id='myDiv126'>...</div><br>
 
- 
-    
-    
+
+
+
 Store these Items in a Javascript object <br>
-    <textarea id="myTextAreaObject" rows="8" cols="70" wrap="false">{
+<textarea id="myTextAreaObject" rows="8" cols="70" wrap="false">{
    "firstName": "John",
    "lastName": "Doe",
    "age": 50,
    "eyeColor": "blue"
 }
-    </textarea><br> 
-    
+    </textarea><br>
+
 <input id="myButton128" type="button" value="Store as an object" onclick="{
       
     var myPerson = {}                                                              
@@ -172,7 +170,7 @@ Store these Items in a Javascript object <br>
 
 <div id='myDiv128'>...</div><br>
 
- 
+
 
 <input id="myButton129" type="button" value="Make and use a function" onclick="{
 
@@ -187,7 +185,7 @@ myFun('28')      // This activates the function
 
 <div id='myDiv129'>...</div><br>
 
- 
+
 
 <input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
                                                                                  
@@ -211,7 +209,7 @@ myFun('28')      // This activates the function
 
 <div id='myDiv130'>...</div><br>
 
- 
+
 
 <input id="myButton131" type="button" value="Extend a class" onclick="{
 class myAnimal {
@@ -237,4 +235,3 @@ class myCat extends myAnimal {
 }"><br><br>
 
 <div id='myDiv131'>...</div><br>
-

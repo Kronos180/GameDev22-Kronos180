@@ -1,158 +1,159 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <title>T3A16-Spy-by-Sean</title>
+  <title>T3A16-Spy-by-Sean</title>
 </head>
-<body> 
-<h1 align=center>T3A16-Spy-Sean.html</h1>
-<h5>version 0.15.31</h5>
 
-<style>
+<body>
+  <h1 align=center>T3A16-Spy-Sean.html</h1>
+  <h5>version 0.15.31</h5>
 
-   .button {
-     background-color: 	rgb(128, 9, 9);
-     border: none;
-     color: white;
-        text-shadow: 2px 2px black;
-     padding: 15px 32px;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 20px;
-     cursor: pointer;
-     font-weight:none;
-     font-style:italic;
-   }
-   
-   .button:hover{
-       background-color: rgb(128, 9, 9);
-       border: 2px solid rgb(128, 9, 9);
-       color: white;
-   font-size: 18px;
-   text-shadow:none;
-   cursor:crosshair;
-     }
-   
-       textarea {
-         width: 100vw;
-         height: auto;
-         color: whitesmoke;
-         background-color: rgb(0, 0, 0);
-        
-       }
-   
-       html {
-         color: rgb(0, 0, 0);
-         background-color: rgb(255, 255, 255);
-       }
-   
-       td {
-         width: 100vw;
-       }
-   
-      
-   
-       input[type="radio"] {
-         -webkit-appearance: none;
-         -moz-appearance: none;
-         appearance: none;
-   
-         display: inline-block;
-         width: 10px;
-         height: 10px;
-         margin-left: 10px;
-         border-radius: 25%;
-   
-         color: rgb(128, 9, 9);
-         background-color: white;
-         outline-offset: 2.5px;
-         outline: 3px groove white;
-       }
-   
-       input[type="radio"]:checked {
-         background-color: rgb(128, 9, 9);
-       }
-     </style>
-   
-     <script>
-       document.toggle = 0;
-   
-       function sleep(ms) {
-         return new Promise((resolve) => setTimeout(resolve, ms));
-       }
-   
-       function myStartUp() {
-         myLow();
-         document.getElementById("L").checked = true;
-         document.getElementById("myArea02").value = "";
-         document.getElementById("myArea03").value = "";
-       }
-   
-       document.myEncryptCounter;
-       document.myEncrypt;
-   
-       
-   
-       function myLow() {
-         myEncrypt = document.getElementById("myArea01").value;
-         myEncryptCounter = 0;
-         for (var i = 0; i < 1; i++) {
-           myEncrypt = btoa(myEncrypt);
-           myEncryptCounter++;
-           console.log("L");
-         }
-       }
-   
-       function myMedium() {
-         myEncrypt = document.getElementById("myArea01").value;
-         myEncryptCounter = 0;
-         for (var i = 0; i < 5; i++) {
-           myEncrypt = btoa(myEncrypt);
-           myEncryptCounter++;
-           console.log("M");
-         }
-       }
-   
-       
-   
-       function ultraTimeAlert() {
-         if (
-           confirm("This takes some time to Encrypt do you wish to continue") ==
-           true
-         ) {
-           myArea02Clear();
-           return;
-         } else {
-           document.getElementById("U").checked = false;
-           document.getElementById("H").checked = true;
-           myArea02Clear();
-         }
-       }
-   
-       function myArea02Clear() {
-         document.getElementById("myArea02").value = "";
-       }
-   
-       function allEncryptFunc() {
-        
-   
-         if (document.getElementById("L").checked == true) {
-           myLow();
-         }
-   
-         if (document.getElementById("M").checked == true) {
-           myMedium();
-         }
-   
-        
-       }
-   
-     </script>
-   
-   <textarea id="myArea99" rows=4 cols=70>Hello how are you</textarea><br> 
+  <style>
+    .button {
+      background-color: rgb(128, 9, 9);
+      border: none;
+      color: white;
+      text-shadow: 2px 2px black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: none;
+      font-style: italic;
+    }
+
+    .button:hover {
+      background-color: rgb(128, 9, 9);
+      border: 2px solid rgb(128, 9, 9);
+      color: white;
+      font-size: 18px;
+      text-shadow: none;
+      cursor: crosshair;
+    }
+
+    textarea {
+      width: 100vw;
+      height: auto;
+      color: whitesmoke;
+      background-color: rgb(0, 0, 0);
+
+    }
+
+    html {
+      color: rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
+    }
+
+    td {
+      width: 100vw;
+    }
 
 
-   <input type=button value="encrypt" onclick="{
+
+    input[type="radio"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      border-radius: 25%;
+
+      color: rgb(128, 9, 9);
+      background-color: white;
+      outline-offset: 2.5px;
+      outline: 3px groove white;
+    }
+
+    input[type="radio"]:checked {
+      background-color: rgb(128, 9, 9);
+    }
+  </style>
+
+  <script>
+    document.toggle = 0;
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    function myStartUp() {
+      myLow();
+      document.getElementById("L").checked = true;
+      document.getElementById("myArea02").value = "";
+      document.getElementById("myArea03").value = "";
+    }
+
+    document.myEncryptCounter;
+    document.myEncrypt;
+
+
+
+    function myLow() {
+      myEncrypt = document.getElementById("myArea01").value;
+      myEncryptCounter = 0;
+      for (var i = 0; i < 1; i++) {
+        myEncrypt = btoa(myEncrypt);
+        myEncryptCounter++;
+        console.log("L");
+      }
+    }
+
+    function myMedium() {
+      myEncrypt = document.getElementById("myArea01").value;
+      myEncryptCounter = 0;
+      for (var i = 0; i < 5; i++) {
+        myEncrypt = btoa(myEncrypt);
+        myEncryptCounter++;
+        console.log("M");
+      }
+    }
+
+
+
+    function ultraTimeAlert() {
+      if (
+        confirm("This takes some time to Encrypt do you wish to continue") ==
+        true
+      ) {
+        myArea02Clear();
+        return;
+      } else {
+        document.getElementById("U").checked = false;
+        document.getElementById("H").checked = true;
+        myArea02Clear();
+      }
+    }
+
+    function myArea02Clear() {
+      document.getElementById("myArea02").value = "";
+    }
+
+    function allEncryptFunc() {
+
+
+      if (document.getElementById("L").checked == true) {
+        myLow();
+      }
+
+      if (document.getElementById("M").checked == true) {
+        myMedium();
+      }
+
+
+    }
+
+  </script>
+
+  <textarea id="myArea99" rows=4 cols=70>Hello how are you</textarea><br>
+
+
+  <input type=button value="encrypt" onclick="{
       let myTemp = ''
       myString = document.getElementById('myArea99').value.toLowerCase().split('')
       for (let myLoop=0;   myLoop < myString.length; myLoop++){
@@ -197,12 +198,12 @@
       }
       document.getElementById('myArea98').value = myString.join('')
    }"><br><br>
-   
-   
-   
-   <textarea id="myArea98" rows=4 cols=70></textarea><br> 
-   
-   <input type=button value="decrypt" onclick="{
+
+
+
+  <textarea id="myArea98" rows=4 cols=70></textarea><br>
+
+  <input type=button value="decrypt" onclick="{
       let myTemp = ''
       myString = document.getElementById('myArea98').value.toLowerCase().split('')
       for (let myLoop=0;   myLoop < myString.length; myLoop++){
@@ -247,38 +248,34 @@
       }
       document.getElementById('myArea97').value = myString.join('')
    }"><br><br>
-   
-   
-   <textarea id="myArea97" rows=4 cols=70></textarea><br>
-   
 
-       <h4>Choose Leval Of Encryption</h4>
-       <table>
-         <tr align="center">
-           
-           <td>Rookie<input type="radio" id="L" value="LOW" name="r1" checked /></td>
-           <td>Master<input type="radio" id="M" value="MEDIUM" name="r1" /></td>
-          
-         </tr>
-       </table>
-       <br /><br />
-   
-       <script>
-        
-         document.getElementById("L").addEventListener("input", myArea02Clear);
-         document.getElementById("M").addEventListener("input", myArea02Clear);
-         document.getElementById("H").addEventListener("input", myArea02Clear);
-         document.getElementById("U").addEventListener("input", ultraTimeAlert);
-       </script>
-   
-       <textarea id="myArea01" rows="1" cols="100vw" style="font-size:xx-large">Confidential information, Do Not Share!!!</textarea
-       ><br />
-   
-       <input
-         class="button button1"
-         type="button"
-         value="Encrypt"
-         onclick="{
+
+  <textarea id="myArea97" rows=4 cols=70></textarea><br>
+
+
+  <h4>Choose Leval Of Encryption</h4>
+  <table>
+    <tr align="center">
+
+      <td>Rookie<input type="radio" id="L" value="LOW" name="r1" checked /></td>
+      <td>Master<input type="radio" id="M" value="MEDIUM" name="r1" /></td>
+
+    </tr>
+  </table>
+  <br /><br />
+
+  <script>
+
+    document.getElementById("L").addEventListener("input", myArea02Clear);
+    document.getElementById("M").addEventListener("input", myArea02Clear);
+    document.getElementById("H").addEventListener("input", myArea02Clear);
+    document.getElementById("U").addEventListener("input", ultraTimeAlert);
+  </script>
+
+  <textarea id="myArea01" rows="1" cols="100vw"
+    style="font-size:xx-large">Confidential information, Do Not Share!!!</textarea><br />
+
+  <input class="button button1" type="button" value="Encrypt" onclick="{
            if (document.getElementById('myArea01').value.length == 0) {
                document.getElementById('myArea02').value = 'Nothing To Encrypt'
            } else {
@@ -287,25 +284,20 @@
            document.getElementById('myArea03').value = '';
            
        }
-   }"
-       /><br /><br />
-   
-       <table>
-         <tr>
-           
-         <tr></tr>
-         <tr>
-           <td><textarea id="myArea02" rows="21vw" style="font-size:x-large" cols="100vw"></textarea></td>
-          </td>
-         </tr>
-       </table>
-       <br />
-   
-       <input
-         class="button button1"
-         type="button"
-         value="Decrypt"
-         onclick="{
+   }" /><br /><br />
+
+  <table>
+    <tr>
+
+    <tr></tr>
+    <tr>
+      <td><textarea id="myArea02" rows="21vw" style="font-size:x-large" cols="100vw"></textarea></td>
+      </td>
+    </tr>
+  </table>
+  <br />
+
+  <input class="button button1" type="button" value="Decrypt" onclick="{
            var myDecrypt = document.getElementById('myArea02').value;
            if ((myEncryptCounter == 0) || (document.getElementById('myArea02').value.length == 0) || (document.getElementById('myArea02').value == 'Nothing To Encrypt')){
                document.getElementById('myArea03').value = 'Nothing To Decrypt';
@@ -315,13 +307,13 @@
                document.getElementById('myArea03').value = myDecrypt;
            }
        }
-   }"
-       /><br /><br />
-   
-       <textarea id="myArea03" rows="1" cols="100vw"></textarea><br />
-   
-       <script>
-         myEncrypt = document.getElementById("myArea01").value;
-       </script>
+   }" /><br /><br />
+
+  <textarea id="myArea03" rows="1" cols="100vw"></textarea><br />
+
+  <script>
+    myEncrypt = document.getElementById("myArea01").value;
+  </script>
 </body>
+
 </html>

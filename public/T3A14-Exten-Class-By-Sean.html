@@ -1,14 +1,14 @@
 <script>
 
- class myAnimal {
-    constructor(passName, passAge) {
-       this.myName = passName;
-       this.myAge = passAge;
-    }
-    myShow(){    
-       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName+'<br>'
-    }
- }  // end class myAnimal
+   class myAnimal {
+      constructor(passName, passAge) {
+         this.myName = passName;
+         this.myAge = passAge;
+      }
+      myShow() {
+         document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>'
+      }
+   }  // end class myAnimal
 
 </script>
 
@@ -45,7 +45,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 
  class myCat extends myAnimal {                                                                      
      myShow(){
-       document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>'
+       document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat <br>'
     }                                                                   
 }    // end extended class myCat
                                                                                                                                                                                                                                                                                                                                     
@@ -55,8 +55,3 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 }">
 
 <div id="myDiv01">...</div>
-
-
-
-
-
