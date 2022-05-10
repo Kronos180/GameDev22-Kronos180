@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>T3A08-CSS-by-Sean</title>
+</head>
+<style>
+  body {
+    /*background: white;*/
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    --hue: 220deg;
+    --width: 3rem;
+    --accent-hue: 0deg;
+    --duration: 0.5s;
+    --easing: cubic-bezier(0, 1, 0, 1);
+  }
+
+  input {
+    display: none;
+  }
+
+
+  .switch {
+    --shadow-offset: calc(var(--width) / 20);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: var(--width);
+    height: calc(var(--width) / 2.5);
+    border-radius: var(--width);
+    box-shadow:
+      inset 10px 10px 10px hsl(var(--hue) 20% 80%),
+      inset -10px -10px 10px hsl(var(--hue) 20% 93%);
+  }
+
+
+  .indicator {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    transition: all var(--duration) var(--easing);
+    box-shadow:
+      inset 0 0 2px hsl(var(--hue) 20% 15% / 60%),
+      inset 0 0 3px 2px hsl(var(--hue) 20% 15% / 60%),
+      inset 0 0 5px 2px hsl(var(--hue) 20% 45% / 60%);
+  }
+
+
+
+  .indicator.left {
+    --hue: var(--accent-hue);
+    overflow: hidden;
+    left: 10%;
+    border-radius: 100px 0 0 100px;
+    background: linear-gradient(180deg, hsl(calc(var(--accent-hue) + 20deg) 95% 80%) 10%, hsl(calc(var(--accent-hue) + 20deg) 100% 60%) 30%, hsl(var(--accent-hue) 90% 50%) 60%, hsl(var(--accent-hue) 90% 60%) 75%, hsl(var(--accent-hue) 90% 50%));
+  }
+
+  .indicator.left::after {
+    content: '';
+    position: absolute;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+  }
+
+  .indicator.right {
+    right: 10%;
+    border-radius: 0 100px 100px 0;
+    background-image: linear-gradient(180deg, hsl(var(--hue) 20% 95%), hsl(var(--hue) 20% 65%) 60%, hsl(var(--hue) 20% 70%) 70%, hsl(var(--hue) 20% 65%));
+  }
+
+
+  .button {
+    position: absolute;
+    z-index: 1;
+    width: 55%;
+    height: 80%;
+    left: 5%;
+    border-radius: 100px;
+    background-image: linear-gradient(160deg, hsl(var(--hue) 20% 95%) 40%, hsl(var(--hue) 20% 65%) 70%);
+    transition: all var(--duration) var(--easing);
+    box-shadow:
+      2px 2px 3px hsl(var(--hue) 18% 50% / 80%),
+      2px 2px 6px hsl(var(--hue) 18% 50% / 40%),
+      10px 20px 10px hsl(var(--hue) 18% 50% / 40%),
+      20px 30px 30px hsl(var(--hue) 18% 50% / 60%);
+  }
+
+  .button::before,
+  .button::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    width: 41%;
+    height: 80%;
+    border-radius: 100%;
+  }
+
+  .button::before {
+    left: 5%;
+    box-shadow: inset 1px 1px 2px hsl(var(--hue) 20% 85%);
+    background-image: linear-gradient(-50deg, hsl(var(--hue) 20% 95%) 20%, hsl(var(--hue) 20% 85%) 80%);
+  }
+
+  .button::after {
+    right: 5%;
+    box-shadow: inset 1px 1px 3px hsl(var(--hue) 20% 70%);
+    background-image: linear-gradient(-50deg, hsl(var(--hue) 20% 95%) 20%, hsl(var(--hue) 20% 75%) 80%);
+  }
+
+  input:checked~.button {
+    left: 40%;
+  }
+
+  input:not(:checked)~.indicator.left,
+  input:checked~.indicator.right {
+    box-shadow:
+      inset 0 0 5px hsl(var(--hue) 20% 15% / 100%),
+      inset 20px 20px 10px hsl(var(--hue) 20% 15% / 100%),
+      inset 20px 20px 15px hsl(var(--hue) 20% 45% / 100%);
+  }
+
+
+  .li {
+    transition-duration: .5s;
+    cursor: pointer;
+  }
+
+  .li1 {
+    color: Darkgrey;
+    text-shadow: 1.5px 1.5px Red;
+  }
+
+  .li1:hover {
+    color: blueviolet;
+    text-shadow: none;
+  }
+
+
+
+  .ta {
+    position: relative;
+    transition-duration: 0.5s;
+  }
+
+  .ta1 {
+    opacity: 100;
+    left: 0px;
+
+  }
+
+  .ta1:focus {
+    position: relative;
+    opacity: 0;
+    left: 1000px
+  }
+
+  @keyframes colorChange {
+
+    10% {
+      color: blue;
+      background-color: black;
+    }
+
+    20% {
+      color: orange;
+      background-color: white;
+    }
+
+    30% {
+      color: aqua;
+      background-color: brown;
+    }
+
+    40% {
+      color: black;
+      background-color: beige;
+    }
+
+    50% {
+      color: lime;
+      background-color: darkviolet;
+    }
+
+    60% {
+      color: magenta;
+      background-color: khaki;
+    }
+
+    70% {
+      color: yellow;
+      background-color: orangered;
+    }
+
+    80% {
+      color: hotpink;
+      background-color: darkred;
+    }
+
+    90% {
+      color: lightsalmon;
+      background-color: indianred;
+    }
+
+    100% {
+      color: plum;
+      background-color: green;
+    }
+
+  }
+</style>
+
+<body>
+  <h5>Version 0.3.31</h5>
+  <h1 align=center>T3A04-CSS-by-Sean</h1>
+
+  Reference Link
+  <a href="https://www.w3schools.com/">W3Schools</a><br>
+
+  Properly done with a .css file listing all CSS commands for your website<br>
+  Another way to do CSS (Cascading Style Sheets: determine colors location extra effects on the toags on your web
+  page)<br>
+
+  Here is typical in document style
+  <pre>
+&LT;style&GT
+b {
+  color: #00ff00:
+  }
+&LT;/style&GT
+</pre><br>
+
+  I do CSS inside the tag. It overpowers all other methods<br>
+
+  <b> This is bold</b><br>
+  <b id="myB1"> This is bold</b>
+
+  <label class="switch">
+    <input type="checkbox" id='boldSwitch' />
+    <div class="indicator left"></div>
+    <div class="indicator right"></div>
+    <div class="button"></div>
+  </label>
+
+  <script>
+    var x = 1;
+    document.getElementById('boldSwitch').addEventListener("input", myFunction);
+
+    function myFunction() {
+
+      if (x == 1) {
+        document.getElementById('myB1').style.animation = 'colorChange 5s infinite';
+        x = 0;
+      } else {
+        document.getElementById('myB1').style.animation = 'none';
+        x = 1;
+      }
+
+    }
+  </script>
+
+  <textarea style="posistion:relative; left:0; top:0; width:200; height:50; ">
+Advanced: See if you can move this textarea
+</textarea><br>
+
+</body>
+
+</html>
