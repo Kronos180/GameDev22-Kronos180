@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T3A11-Arrays-By-Sean</title>
+</head>
+
+<body>
+    Version 0.10.5.15
+
+    <h2 align=center>T1A11-Arrays-by-Sean</h2>
+
+    <a href="https://www.w3schools.com/js/js_arrays.asp">Good reference to Javascript Arrays</a><br>
+
+    Arrays are stored numbered variables
+
+    <h4> Example Array code:</h4>
+    <pre class="mycode">
+myArray = newArray()
+myArray{0} = 'Fred'
+myArray{1} = 'Mary'
+
+</pre>
+
+    <br><br>
+
+    Store these numbers in an array <input type="text" id="myTextArray" value="3, 7, 9" size="10">
+    <br><br>
+    <input id="myButton127" class="button" type="button" value="Store and show array" onClick="{
+                                                              
+      let myArray = [];
+      document.getElementById('myDiv127').innerHTML = '' ;
+                                                              
+      myArray = document.getElementById('myTextArray').value.split(',') ;   
+                                                              
+      for (myIndex in myArray){                                                                                                                  
+         document.getElementById('myDiv127').innerHTML += myIndex + ' stores : ' + myArray[myIndex] + '<br>'
+      }                                                        
+}"><br><br>
+
+    <div id='myDiv127'>...</div><br>
+
+
+
+
+    <p id="ty"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("ty").innerHTML = fruits.join(" * ");
+    </script>
+
+    <p>The join() method joins array elements into a string.</p>
+    <p>It this example we have used " * " as a separator between the elements:</p>
+
+
+    <pre class="mycode">
+
+&lt;script&gt;
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("ty").innerHTML = fruits.join(" * ");
+&lt;/script&gt;
+
+</pre>
+
+
+    <br>
+    <p id="qq"></p>
+
+    <script>
+        const cars = ["Audi", "Mercedes", "BMW"];
+        document.getElementById("qq").innerHTML = cars;
+    </script>
+
+    cars stores [Audi,Mercedes,BMW]
+
+
+
+    <pre class="mycode">
+
+
+&lt;p id="qq">&lt;/p>
+
+&lt;script>
+const cars = ["Audi", "Mercedes", "BMW"];
+document.getElementById("qq").innerHTML = cars;
+<&lt;/script>
+
+cars stores [Audi,Mercedes,BMW]
+
+</pre>
+
+
+    <br><br>
+
+
+
+    Store these numbers in an array <input type="text" id="myTxtArray" value="3, 7, 9, 5, 5, 7, 8" size="10">
+    <br><br>
+    <input id="myButton127" class="button" type="button" value="Store and show array" onclick="{
+                                                              
+      myArray = []
+      document.getElementById('myDiv627').innerHTML = '' 
+                                                              
+      myArray = document.getElementById('myTxtArray').value.split(',')    
+                                                              
+      for (myIndex in myArray){                                                                                                                  
+         document.getElementById('myDiv627').innerHTML +=     myIndex + ' stores : ' + myArray[myIndex] + '<br>'
+      }                                                        
+}"><br><br>
+
+    <div id='myDiv627'></div><br>
+
+    Enter Number of Elements You Want In The Array<br>
+    <input type='number' id="myNumberIn"
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br><br>
+    <input type="button" value="store and Show Array" onclick="{myArrayNumbersRand();setTimeout(myArrayNumbers, 100);}">
+
+    <div id='myDiv02'>...</div><br>
+
+    <script>
+
+        var myNumber = [];
+
+        document.getElementById("myNumberIn").value = "7";
+
+
+        function myArrayNumbersRand() {
+            myNumber = [];
+
+
+            let HowManyNumber = parseInt(document.getElementById('myNumberIn').value)
+
+            for (var i = 0; i < HowManyNumber; i++) {
+
+                RandNumber = Math.random() * 10;
+
+                myNumber.push(Math.floor(RandNumber))
+
+            }
+            console.log(myNumber)
+
+        }
+
+        function myArrayNumbers() {
+            document.getElementById('myDiv02').innerHTML = '';
+
+
+            for (let i = 0; i in myNumber; i++) {
+
+                document.getElementById('myDiv02').innerHTML += 'Array[' + i + ']' + ' = ' + myNumber[i] + '<br>';
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
