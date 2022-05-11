@@ -2,17 +2,17 @@ myarray = [];
 current_level = 1;
 function changeImage(img, mySecondIMG) {
     var image = img;
-    if (image.src.match("/public/images/grey.jpg")) {
+    if (image.src.match("./../images/grey.jpg")) {
         image.src = mySecondIMG;
     }
     else {
-        image.src = "/public/images/grey.jpg";
+        image.src = "./../images/grey.jpg";
     }
 }
 
 function flipImage(img, mySecondIMG) {
     let pair = document.querySelectorAll('#' + img.id)
-    let base = location.origin + '/public/images/grey.jpg'
+    let base = location.origin + './../images/grey.jpg'
     if (pair[0].src != pair[1].src || pair[0].src == base || pair[1].src == base) {
 
         switch (img.src) {
