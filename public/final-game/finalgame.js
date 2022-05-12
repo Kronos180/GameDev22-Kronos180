@@ -15,7 +15,7 @@ function flipImage(img, mySecondIMG) {
     let pair = document.querySelectorAll('#' + img.id)
     let base = location.origin + '/images/grey.jpg'
     if (pair[0].src != pair[1].src || pair[0].src == base || pair[1].src == base) {
-
+consolelog(test)
         switch (img.src) {
             case base: img.style.transform = 'rotateY(180deg)'; break;
             default: img.style.transform = 'rotateY(0deg)'; break;
