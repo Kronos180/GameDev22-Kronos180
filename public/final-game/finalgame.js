@@ -14,6 +14,7 @@ function changeImage(img, mySecondIMG) {
 function flipImage(img, mySecondIMG) {
     let pair = document.querySelectorAll('#' + img.id)
     let base = location.origin + '/images/grey.jpg'
+    console.log('test')
     if (pair[0].src != pair[1].src || pair[0].src == base || pair[1].src == base) {
 
         switch (img.src) {
@@ -33,7 +34,6 @@ function flipImage(img, mySecondIMG) {
             current_level++
             setTimeout(() => { window.location.replace(location.origin + "/level-" + current_level + ".html") }, "5000")
         }
-console.log('test')
     }
 }
 
