@@ -7,7 +7,7 @@ function changeImage(img, mySecondIMG) {
         image.src = mySecondIMG;
     }
     else {
-        image.src = "./../images/grey.jpg";
+        image.src = "../images/grey.jpg";
     }
 }
 
