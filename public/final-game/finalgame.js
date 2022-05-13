@@ -3,7 +3,7 @@ current_level = 1;
 function changeImage(img, mySecondIMG) {
     var image = img;
     console.log(img.src)
-    if (image.src.match(location.origin + "/images/grey.jpg")) {
+    if (image.src.match(location.origin + "/GameDev22-Kronos180/public/images/grey.jpg")) {
         image.src = mySecondIMG;
     }
     else {
