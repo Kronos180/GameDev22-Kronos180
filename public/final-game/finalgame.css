@@ -1,0 +1,30 @@
+.background {
+    background-color: black;
+}
+
+.table {
+    height: 100%;
+    width: auto;
+    margin: auto;
+    ;
+}
+
+.flip-box-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.heading {
+    margin: auto;
+    text-align: center;
+    color: white;
+
+}
+
+.level {
+    color:white;
+    position: absolute;
+    bottom:1px;
+}
