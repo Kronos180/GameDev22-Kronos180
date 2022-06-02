@@ -1,4 +1,5 @@
 myarray = [];
+myAllow = false;
 
 if (sessionStorage.getItem("mylevel") == null) {
     current_level = 1;
@@ -16,6 +17,9 @@ function changeImage(img, mySecondIMG) {
 }
 
 function flipImage(img, mySecondIMG) {
+    if (myallow = false) {
+        return;
+    }
     let pair = document.querySelectorAll('#' + img.id)
     let base = location.origin + '/GameDev22-Kronos180/public/images/grey.jpg'
 
@@ -43,9 +47,9 @@ function flipImage(img, mySecondIMG) {
     }
 }
 
-function autoFlipBack(img, mySecondIMG) {
+/*function autoFlipBack(img, mySecondIMG) {
     setTimeout(() => { flipImage(img, mySecondIMG) }, "3000")
-}
+}*/
 var clicktime = 0
 window.addEventListener('click', e => {
     clicktime = clicktime + 1;
