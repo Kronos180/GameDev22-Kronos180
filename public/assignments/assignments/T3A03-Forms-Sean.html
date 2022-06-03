@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>T3A08-Forms-by-Sean</title>
+</head>
+
+<body>
+  <h5>Version 0.0.31<h5>
+
+      <h1 align=center>T3A03-Form-Sean.html</h1>
+
+      <font color=blue> Prove you can use: Forms</font><br>
+
+      The following are all form elements (add to them):<br>
+
+      <form>
+        Enter your First name:<input type=text id="myText01" value="Sean"><br>
+        Checkbox: <br>
+        Beef:<input type=checkbox><br>
+        Veggy:<input type=checkbox><br>
+        Radio Buttons:<br>
+        107.7 <input type=radio name="myRad01" value="..."><br>
+        83.5 <input type=radio name="myRad01" value="..."><br>
+
+        Hidden:<input type=hidden><br>
+        File:<input type=file><br>
+        Reset:<input type=reset><br>
+        Submit (Advanced):<input type=submit><br>
+
+        Button: <input type=botton value="click" onclick="{
+    document.getElementByID('myArea01').value = 'Cool' 
+    }"><br>
+        Textarea:<br>
+        <textarea id="myArea01" cols=60 rows=5> WOW </textarea><br>
+
+        Select Box:<br>
+        <select id="mySelect01" size=2 onChange="{
+      document.getElementByID('myArea01').value = document.getElementById('mySelect01'),value
+      }">
+          <option value='myOne'>One
+          <option value='myTwo'>Two
+          <option value='myThree'>Three
+        </select>
+        </from>
+
+        <b> Eye Color. </b> <br> <br>
+
+        Hazel: <input name="rad1" type="radio"><br>
+        Brown: <input name="rad1" type="radio"><br>
+        Green: <input name="rad1" type="radio"><br>
+        Blue: <input name="rad1" type="radio"><br> <br> <br>
+
+        <b> Favorite Subject. </b> <br> <br>
+
+        Math: <input type="checkbox"><br>
+        Physics: <input type="checkbox"><br>
+        Woodwork: <input type="checkbox"><br>
+        Metalwork: <input type="checkbox"><br>
+
+        <br><br>
+
+        <b> Choose Elemental Super Power </b> <br> <br>
+
+        Fire: <input name="rad2" type="radio"><br>
+        Water: <input name="rad2" type="radio"><br>
+        Air: <input name="rad2" type="radio"><br>
+        Gravity: <input name="rad2" type="radio"><br> <br> <br>
+
+        <b> Choose Gender </b> <br> <br>
+
+        Male: <input name="rad3" type="radio"><br>
+        Female: <input name="rad3" type="radio"><br>
+        Other: <input name="rad3" type="radio"><br> <br> <br>
+
+        Button: <input type=button value="click" onClick="{
+    document.getElementById('myArea2').value='cool'
+    }"><br><br>
+
+        Textarea:<br>
+        <textarea id="myArea2" cols="60" rows="5" placeholder="WOW!!"></textarea><br>
+
+        Select Box:<br>
+        <select id="mynumbers" name="number" size=1 <option onClick="{
+    document.getElementById('mydiv').innerHTML = value
+    }">
+          <option value='Zero'>Zero
+          <option value='One'>One
+          <option value='Two'>Two
+          <option value='Three'>Three
+
+
+        </select>
+        <div id="mydiv">...</div><br><br>
+
+        <input type="file" name="image"><br><br>
+
+        Date: <input type="date" name="Startdate"><br><br>
+
+        URL: <input type="url" name="website" placeholder="http://example.com"><br><br>
+
+        Phone#: <input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+
+        <b>
+          <div class="Blink" style="text-shadow: none">Must Type IN!!! <br> Try A Broswer Name <br> Or A Search Engine
+          </div>
+        </b>
+        fancy input: <input list="browsers" name="browser">
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+          <option value="Google">
+          <option value="Yahoo">
+          <option value="Bing">
+          <option value="DuckDuckGo">
+          <option value="Wolfram Alpha">
+        </datalist> <br><br><br>
+
+
+
+
+</body>
+
+</html>
