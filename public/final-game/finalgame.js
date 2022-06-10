@@ -1,5 +1,4 @@
 myarray = [];
-myAllow = false;
 
 if (sessionStorage.getItem("mylevel") == null) {
     current_level = 1;
@@ -17,16 +16,13 @@ function changeImage(img, mySecondIMG) {
 }
 
 function flipImage(img, mySecondIMG) {
-    if (myallow = false) {
-        return;
-    }
     let pair = document.querySelectorAll('#' + img.id)
     let base = location.origin + '/GameDev22-Kronos180/public/images/grey.jpg'
 
     if (pair[0].src != pair[1].src || pair[0].src == base || pair[1].src == base) {
 
         switch (img.src) {
-            case base: img.style.transform = 'rotateY(180deg)'; break;
+            case base: img.style.transform = 'rotateY(360deg)'; break;
             default: img.style.transform = 'rotateY(0deg)'; break;
         }
         setTimeout(() => { changeImage(img, mySecondIMG) }, "200")
@@ -47,9 +43,9 @@ function flipImage(img, mySecondIMG) {
     }
 }
 
-/*function autoFlipBack(img, mySecondIMG) {
+function autoFlipBack(img, mySecondIMG) {
     setTimeout(() => { flipImage(img, mySecondIMG) }, "3000")
-}*/
+}
 var clicktime = 0
 window.addEventListener('click', e => {
     clicktime = clicktime + 1;
